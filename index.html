@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multi Step Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Step 1 -->
+  <div class="step" id="step1">
+    <h2>Step 1 - Personal Info</h2>
+
+    <input type="text" id="name" placeholder="Enter your name">
+    <p id="nameError" class="error"></p>
+
+    <input type="email" id="email" placeholder="Enter your email">
+    <p id="emailError" class="error"></p>
+
+    <input type="number" id="age" placeholder="Enter your age">
+    <p id="ageError" class="error"></p>
+
+    <input type="text" id="city" placeholder="Enter your city">
+    <p id="cityError" class="error"></p>
+
+    <button onclick="goToStep2()">Next →</button>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="step" id="step2">
+    <h2>Step 2 - Details</h2>
+
+    <input type="text" id="phone" placeholder="Enter your phone">
+    <p id="phoneError" class="error"></p>
+
+    <input type="text" id="gender" placeholder="Enter your gender">
+    <p id="genderError" class="error"></p>
+
+    <input type="text" id="course" placeholder="Enter your course">
+    <p id="courseError" class="error"></p>
+
+    <input type="text" id="skills" placeholder="Enter your skills">
+    <p id="skillsError" class="error"></p>
+
+    <button onclick="goToStep1()">← Previous</button>
+    <button onclick="goToStep3()">Next →</button>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="step" id="step3">
+    <h2>Step 3 - Review</h2>
+    <div id="review"></div>
+
+    <button onclick="goToStep2()">← Previous</button>
+    <button onclick="submitForm()">Submit</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
